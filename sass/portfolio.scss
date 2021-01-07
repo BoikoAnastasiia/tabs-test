@@ -1,0 +1,242 @@
+
+@import "./base/_normilize.scss";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
+@import "./utils/vars";
+@import "../fonts";
+@import "./utils/mixins";
+@import "./utils/general";
+@import "./components/page-header";
+@import "./components/footer";
+@import "./components/logo";
+
+
+.filter {
+  padding-bottom: 40px;
+  padding-top: 90px;
+  @include for-size(tablet) {
+    padding-bottom: 30px;
+  }
+   
+    &-header {
+      color: $title-text-color;
+      justify-content: flex-start; 
+      flex-wrap: wrap;
+      margin-bottom: -15px;
+
+      @include for-size(tablet) {
+      justify-content: center;
+      margin-bottom: 0;
+
+    }
+
+    @include for-size(desktop) {
+      margin-bottom: 50px;
+    }
+  }
+
+
+    &-btn {
+      margin-right: 8px;
+      margin-bottom: 15px;
+    }
+  }
+ 
+  .btn-secondary {
+    color: $title-text-color;
+    background-color: $secondary-background-color;
+    border-color: $secondary-background-color;
+    cursor: pointer;
+    @include font(16px, 1.62, 500);
+    letter-spacing: 0.03em;
+    font-style: normal;
+    text-decoration: none;
+    border-radius: 4px;
+    padding-right: 22px;
+    padding-left: 22px;
+    padding-bottom: 8px;
+    padding-top: 5px;
+    box-shadow: none;
+    border-style: solid;
+    transition: 450ms $timing;
+      &:hover,
+      &:focus {
+        color: $primary-white-color;
+        background-color: $accent-color;
+        border-color: $accent-color;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+    }
+  }
+  
+  .portfolio-title {
+    display: inline-block;
+    color: $title-text-color;
+    @include font(18px, 2, 700);
+    letter-spacing: 0.06em;
+    font-style: normal;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+  }
+  
+  .portfolio-container {
+    padding-bottom: 60px;
+    @include for-size(desktop) {
+      padding-bottom: 94px;
+    }
+  }
+  
+  .portfolio-description {
+    color: $primarily-text-color;
+    @include font(16px, 2);
+    letter-spacing: 0.03em;
+    font-style: normal;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    margin: 0;
+  }
+  
+  .portfolio-card {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    
+    position: relative;
+    overflow: hidden;
+  
+
+    & img {
+      width: 100%;
+    }
+
+    &:hover  {
+      background: #FFFFFF;
+      border: 1px solid #EEEEEE;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+      0px 4px 4px rgba(0, 0, 0, 0.06), 
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @include for-size(tablet) {
+      width: calc((100% - 30px) / 2);
+
+      &:nth-child(2n) {
+        margin-left: 30px;
+    }
+
+  
+
+    @include for-size(desktop) {
+      width: calc((100% - 30px * 2) / 3);
+      margin-right: 30px;
+      margin-bottom: 30px;
+
+     &:nth-child(2n) {
+        margin-left: 0;
+     }
+   
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+  }
+
+  
+
+  .card-thumb {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+      &::before {
+        display: inline-block;
+        content: "";
+      
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(33, 150, 243, 0.9);
+      
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform 550ms $timing;
+      }
+  }
+  
+  .card-action {
+    opacity: 0;
+    font-style: normal;
+    font-weight: normal;
+    color: $primary-white-color;
+    @include font(18px, 1.5);
+    position: absolute;
+    display: block;   
+    right: 0;
+    top: 0;
+    padding: 63px 24px;
+    
+  
+    transform: translateY(100%);
+    transition: transform 550ms $timing;
+
+    @media screen and (min-width: 320px) {
+      padding-top: 10px;
+   }
+   @include for-size(mobile) {
+    padding-top: 30px;
+   }
+   @media screen and (min-width: 513px) {
+    padding-top: 60px;
+    font-size: 22px;
+ }
+ @media screen and (min-width: 690px) {
+  font-size: 30px;
+
+  @include for-size(mobile) {
+    font-size: 18px;
+    padding-top: 49px;
+   }
+}
+@media screen and (min-width: 917px) {
+  font-size: 22px;
+}
+@include for-size(desktop) {
+  font-size: 18px;
+  padding-top: 63px;
+ }
+  }
+    
+      .portfolio-card:hover .card-description {
+    transform: translateY(0);
+  }
+  
+  .portfolio-list {
+    @include for-size(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    margin: -30px;
+    }
+  }
+
+
+  .card-thumb:hover::before {
+    opacity: 1;
+  }
+
+  .portfolio-card:hover .card-action,
+  .portfolio-card:hover .card-thumb::before {
+    opacity: 1;
+    transform: translateY(0);
+  }

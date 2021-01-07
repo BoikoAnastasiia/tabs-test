@@ -1,0 +1,98 @@
+.partners {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -30px;
+  }
+
+  .mobile-partners {
+    margin-top: 60px;
+    
+    @include for-size(tablet) {
+    margin-bottom: -30px;
+    }
+    @include for-size(desktop) {
+      margin-bottom: 60px;
+
+    }
+  }
+  
+  .logo-one {
+    width: 44px; 
+    height: 49px;
+    fill: currentColor;
+  }
+  
+  .logo-two {
+    width: 40px; 
+    height: 52px;
+    fill: currentColor;
+  }
+  
+  .logo-three {
+    width: 41px; 
+    height: 43px;
+    fill: currentColor;
+  }
+  
+  .logo-four {
+    width: 80px; 
+    height: 42px;
+    fill: currentColor;
+  }
+  
+  .logo-five {
+    width: 59px; 
+    height: 47px;
+    fill: currentColor;
+  }
+  
+  .logo-six {
+    width: 88px; 
+    height: 45px;
+    fill: currentColor;
+  }
+  
+  .partner-list {
+    width: calc((100% - 30px) / 2);
+    height: 90px;
+    margin-bottom: 30px;
+
+    @include for-size(tablet) {
+      width: calc((100% - 30px * 2) / 3);
+    }
+
+    @include for-size(desktop) {
+      width: calc((100% - 30px * 5) / 6);
+      margin-bottom: 0;
+    }
+
+  }
+  
+  .logo-link {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: #AFB1B8;
+    border: 1px solid #AFB1B8;;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms $timing;
+
+      & svg {
+        transition: 450ms $timing;
+      }
+
+    &:hover svg {
+      cursor: pointer;
+      fill: $accent-color;
+    }
+
+    &:hover {
+      border: 1px solid $accent-color;
+      border-radius: 4px;
+    }
+  }

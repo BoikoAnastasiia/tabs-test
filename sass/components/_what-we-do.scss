@@ -1,0 +1,49 @@
+
+  .whatwedo {
+
+    @media screen and (max-width: 1999px) {
+      display: none;
+    }
+
+    @include for-size(desktop) {
+      display: block;
+    }
+  }
+  
+  .wedo {
+    align-content: space-between;
+    & li:nth-child(-n + 2) {
+      margin-right: 30px;
+    }
+  }
+  
+  .overlay {
+    position: relative;
+  }
+  
+  .overlay-text {
+    width: 100%;
+    background: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    position: absolute;
+    padding-top: 27px;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+  
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1em;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+  }
+  
+  
+  .container .list-cards,
+  .container .partners-list,
+  .container .wedo {
+    margin-top: 50px;
+  }
