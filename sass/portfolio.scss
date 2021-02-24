@@ -230,3 +230,11 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.portfolio-list .remove {
+  display: none;
+}
+
+.portfolio-list .show {
+  display: block;
+}

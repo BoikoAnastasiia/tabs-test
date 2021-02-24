@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>filter</title>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="./css/portfolio.css" />
   </head>
   <body>
@@ -78,31 +77,31 @@
         <div class="container">
           <ul class="filter-header list flexbox">
             <li class="filter-btn">
-              <button type="button" class="btn-secondary" data-value="all">
+              <button type="button" class="btn-secondary all-filter">
                 Все
               </button>
             </li>
+
             <li class="filter-btn">
-              <button type="button" class="btn-secondary" data-value="sites">
+              <button type="button" class="btn-secondary web-filter">
                 Веб-сайты
               </button>
             </li>
+
             <li class="filter-btn">
-              <button type="button" class="btn-secondary" data-value="apps">
+              <button type="button" class="btn-secondary app-flilter">
                 Приложения
               </button>
             </li>
+
             <li class="filter-btn">
-              <button type="button" class="btn-secondary" data-value="design">
+              <button type="button" class="btn-secondary design-filter">
                 Дизайн
               </button>
             </li>
+
             <li class="filter-btn">
-              <button
-                type="button"
-                class="btn-secondary"
-                data-value="marketing"
-              >
+              <button type="button" class="btn-secondary marketing-filter">
                 Маркетинг
               </button>
             </li>
@@ -114,7 +113,7 @@
       <section class="portfolio-container">
         <div class="container">
           <ul class="list portfolio-list">
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-web="web">
               <div class="card-thumb">
                 <picture>
                   <source
@@ -167,7 +166,7 @@
               <p class="portfolio-description">Веб-сайт</p>
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-design="design">
               <div class="card-thumb">
                 <picture>
                   <source
@@ -221,7 +220,7 @@
               <p class="portfolio-description">Дизайн</p>
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-app="app">
               <div class="card-thumb">
                 <picture>
                   <source
@@ -271,7 +270,7 @@
               <p class="portfolio-description">Приложение</p>
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-marketing="marketing">
               <div class="card-thumb">
                 <picture>
                   <source
@@ -321,7 +320,7 @@
               <p class="portfolio-description">Маркетинг</p>
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-app="app">
               <div class="card-thumb">
                 <picture>
                   <source
@@ -371,7 +370,7 @@
               <p class="portfolio-description">Приложение</p>
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-web="web">
               <div class="card-thumb">
                 <picture>
                   <source
@@ -426,7 +425,7 @@
               <p class="portfolio-description">Веб-сайт</p>
             </li>
 
-            <li class="portfolio-card">
+            <li class="portfolio-card" data-design="design">
               <div class="card-thumb">
                 <picture>
                   <source
@@ -698,6 +697,6 @@
     </footer>
 
     <script src="./js/menu.js" type="module"></script>
-    <script src="./js/filter.js" type="module"></script>
+    <script src="./js/tabs-filter.js" type="module"></script>
   </body>
 </html>
