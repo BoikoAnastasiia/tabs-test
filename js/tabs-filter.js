@@ -65,4 +65,12 @@ function showMarketing() {
     }
   });
 }
+
+function removeAndShow() {
+  allFilteredListArray.forEach((li) => {
+    li.classList.remove("remove");
+    li.classList.remove("show");
+  });
+}
+
 // // https://codepen.io/georgemejia/pen/rNNQEbz
