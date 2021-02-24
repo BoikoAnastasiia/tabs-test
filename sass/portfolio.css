@@ -1047,7 +1047,7 @@ h5 {
 }
 
 .portfolio-list .remove {
-  display: none;
+  background-color: aquamarine;
 }
 
 .portfolio-list .show {
