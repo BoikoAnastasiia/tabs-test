@@ -22,6 +22,7 @@ sitesTab.addEventListener("click", showSites);
 function showSites() {
   allFilteredListArray.forEach((li) => {
     li.classList.remove("remove");
+    li.classList.remove("show");
 
     if (!li.dataset.web) {
       li.classList.add("remove");
@@ -33,6 +34,7 @@ appsTab.addEventListener("click", showApps);
 function showApps() {
   allFilteredListArray.forEach((li) => {
     li.classList.remove("remove");
+    li.classList.remove("show");
 
     if (!li.dataset.app) {
       li.classList.add("remove");
@@ -44,6 +46,7 @@ designTab.addEventListener("click", showDesign);
 function showDesign() {
   allFilteredListArray.forEach((li) => {
     li.classList.remove("remove");
+    li.classList.remove("show");
 
     if (!li.dataset.design) {
       li.classList.add("remove");
@@ -55,6 +58,7 @@ marketingTab.addEventListener("click", showMarketing);
 function showMarketing() {
   allFilteredListArray.forEach((li) => {
     li.classList.remove("remove");
+    li.classList.remove("show");
 
     if (!li.dataset.marketing) {
       li.classList.add("remove");
